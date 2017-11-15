@@ -6,7 +6,6 @@ import AboutMe from "./AboutMe.react";
 import { t } from "./Translations";
 
 const Pages = ["aboutMe"];
-    
 
 class App extends React.Component {
 
@@ -141,27 +140,12 @@ class App extends React.Component {
         <Navbar inverse collapseOnSelect className="navbar-static-top">
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="#" onClick={this.seeAboutMe}>Guillaume Gomez</a>
+              <a href="#" onClick={this.seeAboutMe}>Roger Claude</a>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
-          <Navbar.Collapse>
-            <Nav>
-              <NavItem eventKey={1} onClick={this.seeResume}>{t(locale, "index_resume")}</NavItem>
-              <NavDropdown eventKey={2} title={t(locale, "index_work")} id="basic-nav-dropdown">
-                <MenuItem eventKey={2.1} onClick={this.seeStudentProjects} >{t(locale, "index_student_project")}</MenuItem>
-                <MenuItem eventKey={2.2} onClick={this.seePersonalProjects}>{t(locale, "index_personal_project")}</MenuItem>
-                <MenuItem divider />
-                <MenuItem eventKey={2.3} onClick={this.seeContribution}>{t(locale, "index_contributions")}</MenuItem>
-              </NavDropdown>
-            </Nav>
-          </Navbar.Collapse>
         </Navbar>
         {this.renderAboutMe()}
-        {this.renderResume()}
-        {this.renderStudentProjects()}
-        {this.renderPersonnalProjects()}
-        {this.renderContribution()}
       </div>
     );
   }

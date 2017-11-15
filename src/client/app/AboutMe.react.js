@@ -15,7 +15,6 @@ class AboutMe extends React.Component {
         <div className="w3-padding-64 w3-center">
           <h1 className="about-me-text-primary-color">{t(locale, "about_me_title")}</h1>
           <div className="about-me-text-primary-color w3-padding-xxlarge">
-            <p>{t(locale, "about_me_content")}</p>
           </div>
           <div>
           </div>
