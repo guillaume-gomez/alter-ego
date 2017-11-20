@@ -14,15 +14,9 @@ class App extends React.Component {
     [
       "renderNavBar",
       "renderAboutMe",
-      "renderResume",
-      "renderStudentProjects",
-      "renderPersonnalProjects",
       "renderContribution",
       "seeAboutMe",
       "seeResume",
-      "seeStudentProjects",
-      "seePersonalProjects",
-      "seeContribution",
       "checkKonamiCode"
     ].forEach(item => {
       this[item] = this[item].bind(this);
@@ -83,53 +77,9 @@ class App extends React.Component {
     this.updateQueryString("aboutMe");
   }
 
-  seeResume() {
-    this.setState({ currentPage: "resume" });
-    this.updateQueryString("resume");
-  }
-
-  seeStudentProjects() {
-    this.setState({ currentPage: "studentProjects" });
-    this.updateQueryString("studentProjects");
-  }
-
-  seePersonalProjects() {
-    this.setState( { currentPage: "personalProjects" });
-    this.updateQueryString("personalProjects");
-  }
-
-  seeContribution() {
-    this.setState( { currentPage: "contributions" });
-    this.updateQueryString("contributions");
-  }
-
   renderAboutMe() {
     if(this.state.currentPage === "aboutMe") {
       return (<AboutMe locale={this.state.locale} />);
-    }
-  }
-
-  renderResume() {
-    if(this.state.currentPage === "resume") {
-      return (<Resume locale={this.state.locale} />);
-    }
-  }
-
-  renderStudentProjects() {
-    if(this.state.currentPage === "studentProjects") {
-      return (<StudentProjects locale={this.state.locale} />);
-    }
-  }
-
-  renderPersonnalProjects() {
-    if(this.state.currentPage === "personalProjects") {
-      return (<PersonalProjects locale={this.state.locale} />);
-    }
-  }
-
-  renderContribution() {
-    if(this.state.currentPage === "contributions") {
-      return (<Contribution locale={this.state.locale} />);
     }
   }
 

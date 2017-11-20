@@ -83,7 +83,7 @@
 	
 	    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
 	
-	    ["renderNavBar", "renderAboutMe", "renderResume", "renderStudentProjects", "renderPersonnalProjects", "renderContribution", "seeAboutMe", "seeResume", "seeStudentProjects", "seePersonalProjects", "seeContribution", "checkKonamiCode"].forEach(function (item) {
+	    ["renderNavBar", "renderAboutMe", "renderContribution", "seeAboutMe", "seeResume", "checkKonamiCode"].forEach(function (item) {
 	      _this[item] = _this[item].bind(_this);
 	    });
 	    _this.state = { currentPage: "aboutMe", locale: "fr", konamiCodeIndex: 0 };
@@ -150,62 +150,10 @@
 	      this.updateQueryString("aboutMe");
 	    }
 	  }, {
-	    key: 'seeResume',
-	    value: function seeResume() {
-	      this.setState({ currentPage: "resume" });
-	      this.updateQueryString("resume");
-	    }
-	  }, {
-	    key: 'seeStudentProjects',
-	    value: function seeStudentProjects() {
-	      this.setState({ currentPage: "studentProjects" });
-	      this.updateQueryString("studentProjects");
-	    }
-	  }, {
-	    key: 'seePersonalProjects',
-	    value: function seePersonalProjects() {
-	      this.setState({ currentPage: "personalProjects" });
-	      this.updateQueryString("personalProjects");
-	    }
-	  }, {
-	    key: 'seeContribution',
-	    value: function seeContribution() {
-	      this.setState({ currentPage: "contributions" });
-	      this.updateQueryString("contributions");
-	    }
-	  }, {
 	    key: 'renderAboutMe',
 	    value: function renderAboutMe() {
 	      if (this.state.currentPage === "aboutMe") {
 	        return _react2.default.createElement(_AboutMe2.default, { locale: this.state.locale });
-	      }
-	    }
-	  }, {
-	    key: 'renderResume',
-	    value: function renderResume() {
-	      if (this.state.currentPage === "resume") {
-	        return _react2.default.createElement(Resume, { locale: this.state.locale });
-	      }
-	    }
-	  }, {
-	    key: 'renderStudentProjects',
-	    value: function renderStudentProjects() {
-	      if (this.state.currentPage === "studentProjects") {
-	        return _react2.default.createElement(StudentProjects, { locale: this.state.locale });
-	      }
-	    }
-	  }, {
-	    key: 'renderPersonnalProjects',
-	    value: function renderPersonnalProjects() {
-	      if (this.state.currentPage === "personalProjects") {
-	        return _react2.default.createElement(PersonalProjects, { locale: this.state.locale });
-	      }
-	    }
-	  }, {
-	    key: 'renderContribution',
-	    value: function renderContribution() {
-	      if (this.state.currentPage === "contributions") {
-	        return _react2.default.createElement(Contribution, { locale: this.state.locale });
 	      }
 	    }
 	  }, {
